@@ -20,6 +20,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 
+/*html3shiv?*/
+/*@cc_on'acronym applet bgsound center dir fn font big blink strike tt u isindex layer ilayer nolayer listing marquee nobr plaintext spacer xml xmp'.replace(/\w+/g,function(n){document.createElement(n)});@*/
+
+
 //Let's get document.all back
 if(!document.all) {
 	document.all = function() {

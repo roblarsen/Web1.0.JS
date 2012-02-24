@@ -35,3 +35,26 @@ if(!document.all) {
 		}
 	}
 };
+
+/*blink!*/
+/* TODO: MAKE THIS MOAR AWESOME */
+
+var blinks = document.getElementsByName( "blink" ),
+	test = blinks.length,
+	callback;
+
+if ( test > 0 ){
+	for (var i = 0; i <test; i++) {
+		callback = function() { 
+			var vis = blinks[ i ].style.visibility;
+			if ( vis === "visible" ){
+			  vis = "hidden"; 	
+			  return;
+		    } else {
+			  vis = "visible";
+			  return;
+			}
+		}
+		setInterval( callback, 200 )
+	}
+}

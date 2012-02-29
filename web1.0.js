@@ -96,18 +96,22 @@ var baby = (function(){
             }
         };
 
-    return function(className){
+    return function(className, num){
+        className = className || 'baby';
+        num = (num > 1) ? num : 1;
         var containers = document.getElementsByClassName(className);
 
         for(var i = 0, length = containers.length; i < length; i++){
-            var canvas = document.createElement('canvas');
-            canvas.width = 220;
-            canvas.height = 200;
-
-            containers[i].appendChild(canvas);
-            var ctx = canvas.getContext("2d");
-            _draw(canvas, ctx, 0);
+            for(var j = 0; j < num; j++){
+                var canvas = document.createElement('canvas');
+                canvas.width = 220;
+                canvas.height = 200;
+    
+                containers[i].appendChild(canvas);
+                var ctx = canvas.getContext("2d");
+                _draw(canvas, ctx, 0);
+            }
         }
     };
 }());
-baby('baby');
+baby();
